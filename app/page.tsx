@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import dynamic from 'next/dynamic'
 import SpotPriceTicker from '@/components/shared/SpotPriceTicker'
 import WhatsAppButton from '@/components/shared/WhatsAppButton'
 import Navbar from '@/components/home/Navbar'
@@ -9,15 +10,16 @@ import AboutSection from '@/components/home/AboutSection'
 import GoldBullionSection from '@/components/home/GoldBullionSection'
 import SilverBullionSection from '@/components/home/SilverBullionSection'
 import WhyInvestSection from '@/components/home/WhyInvestSection'
-import DealsOfTheDay from '@/components/home/DealsOfTheDay'
 import GoldBarBanner from '@/components/home/GoldBarBanner'
-import ShopSection from '@/components/home/ShopSection'
 import TrustSection from '@/components/home/TrustSection'
 import SellSection from '@/components/home/SellSection'
 import Footer from '@/components/home/Footer'
 import MobileStickyCTA from '@/components/home/MobileStickyCTA'
-import InvestmentGuideSection from '@/components/home/PreciousMetalsInvestmentGuide'
-import LivePriceSection from '@/components/home/LivePriceSection'
+
+const LivePriceSection = dynamic(() => import('@/components/home/LivePriceSection'))
+const InvestmentGuideSection = dynamic(() => import('@/components/home/PreciousMetalsInvestmentGuide'))
+const DealsOfTheDay = dynamic(() => import('@/components/home/DealsOfTheDay'))
+const ShopSection = dynamic(() => import('@/components/home/ShopSection'))
 
 export default function HomePage() {
   const [cartCount, setCartCount] = useState(0)

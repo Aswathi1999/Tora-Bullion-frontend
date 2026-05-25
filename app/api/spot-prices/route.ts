@@ -3,8 +3,7 @@ import { NextResponse } from 'next/server'
 const AED_PER_USD = 3.6725
 const GRAMS_PER_OZ = 31.1035
 
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
+export const revalidate = 60
 
 export async function GET() {
   try {

@@ -1,31 +1,14 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { TrendingUp, TrendingDown, RefreshCw, Minus } from 'lucide-react'
 import {
   AreaChart, Area, XAxis, YAxis, Tooltip,
   ResponsiveContainer, CartesianGrid,
 } from 'recharts'
-
-type Metal = { gramAED: number; ozAED: number; trend: 'up' | 'down' | 'flat' }
-type Prices = { gold: Metal; silver: Metal }
-type DataPoint = { time: string; value: number }
+import { useSpotPrice } from '@/contexts/SpotPriceContext'
 
 const ease = [0.22, 1, 0.36, 1] as [number, number, number, number]
-const MAX_POINTS = 20
-
-function seedHistory(current: number, count = 8): DataPoint[] {
-  const now = Date.now()
-  return Array.from({ length: count }, (_, i) => {
-    const t = new Date(now - (count - i) * 60_000)
-    const jitter = (Math.random() - 0.5) * current * 0.003
-    return {
-      time: t.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      value: +(current + jitter).toFixed(2),
-    }
-  })
-}
 
 function fmt(n: number) {
   return n.toLocaleString('en-AE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
@@ -49,50 +32,7 @@ function CustomTooltip({ active, payload, label, accent }: CustomTooltipProps) {
 }
 
 export default function LivePriceSection() {
-  const [prices, setPrices] = useState<Prices | null>(null)
-  const [goldHistory, setGoldHistory] = useState<DataPoint[]>([])
-  const [silverHistory, setSilverHistory] = useState<DataPoint[]>([])
-  const [loading, setLoading] = useState(true)
-
-  const fetchPrices = useCallback(async () => {
-    try {
-      const res = await fetch('/api/spot-prices')
-      if (!res.ok) throw new Error()
-      const data = await res.json()
-      const timeLabel = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-
-      setPrices(prev => ({
-        gold: {
-          gramAED: data.gold.gramAED,
-          ozAED: data.gold.ozAED,
-          trend: prev ? (data.gold.gramAED > prev.gold.gramAED ? 'up' : data.gold.gramAED < prev.gold.gramAED ? 'down' : 'flat') : 'flat',
-        },
-        silver: {
-          gramAED: data.silver.gramAED,
-          ozAED: data.silver.ozAED,
-          trend: prev ? (data.silver.gramAED > prev.silver.gramAED ? 'up' : data.silver.gramAED < prev.silver.gramAED ? 'down' : 'flat') : 'flat',
-        },
-      }))
-
-      setGoldHistory(prev => {
-        const seed = prev.length === 0 ? seedHistory(data.gold.gramAED) : prev
-        const next = [...seed, { time: timeLabel, value: data.gold.gramAED }]
-        return next.slice(-MAX_POINTS)
-      })
-      setSilverHistory(prev => {
-        const seed = prev.length === 0 ? seedHistory(data.silver.gramAED) : prev
-        const next = [...seed, { time: timeLabel, value: data.silver.gramAED }]
-        return next.slice(-MAX_POINTS)
-      })
-    } catch { /* keep previous */ }
-    finally { setLoading(false) }
-  }, [])
-
-  useEffect(() => {
-    fetchPrices()
-    const t = setInterval(fetchPrices, 60_000)
-    return () => clearInterval(t)
-  }, [fetchPrices])
+  const { prices, loading, goldHistory, silverHistory } = useSpotPrice()
 
   const metals = prices ? [
     { label: 'Gold',   symbol: 'XAU', purity: '999.9', ...prices.gold,   accent: '#C9982A', gradId: 'goldGrad', history: goldHistory,   glow: 'rgba(201,152,42,0.18)' },

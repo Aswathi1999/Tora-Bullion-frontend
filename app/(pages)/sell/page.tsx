@@ -69,7 +69,7 @@ export default function SellPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease }}
-            className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#C9982A]/40 bg-[#C9982A]/10 px-4 py-1.5"
+            className="mb-4 self-start inline-flex items-center gap-2 rounded-full border border-[#C9982A]/40 bg-[#C9982A]/10 px-4 py-1.5"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-[#C9982A]" />
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C9982A]">Sell Gold & Silver</span>
@@ -100,7 +100,7 @@ export default function SellPage() {
             href="https://wa.me/971542891916?text=Hello%20Tora%20Bullion!%20I%20would%20like%20to%20sell%20my%20bullion."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-extrabold text-[#0a0800] shadow-[0_8px_32px_rgba(201,152,42,0.3)] transition-all hover:-translate-y-0.5"
+            className="self-start inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-extrabold text-[#0a0800] shadow-[0_8px_32px_rgba(201,152,42,0.3)] transition-all hover:-translate-y-0.5"
             style={{ background: 'linear-gradient(135deg, #C9982A 0%, #E8C060 50%, #B8860B 100%)' }}
           >
             Get a Free Valuation

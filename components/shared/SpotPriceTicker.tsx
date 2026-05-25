@@ -1,50 +1,10 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
 import { TrendingUp, TrendingDown, RefreshCw } from 'lucide-react'
-
-type Metal = { gramAED: number; ozAED: number; trend: 'up' | 'down' | 'flat' }
-type Prices = { gold: Metal; silver: Metal }
-
-const REFRESH_MS = 60_000
+import { useSpotPrice } from '@/contexts/SpotPriceContext'
 
 export default function SpotPriceTicker({ theme = 'light' }) {
-  const [prices, setPrices] = useState<Prices | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [lastUpdated, setLastUpdated] = useState<string | null>(null)
-
-  const fetchPrices = useCallback(async () => {
-    try {
-      const res = await fetch('/api/spot-prices')
-      if (!res.ok) throw new Error()
-      const data = await res.json()
-
-      setPrices(prev => ({
-        gold: {
-          gramAED: data.gold.gramAED,
-          ozAED: data.gold.ozAED,
-          trend: prev ? (data.gold.gramAED > prev.gold.gramAED ? 'up' : data.gold.gramAED < prev.gold.gramAED ? 'down' : 'flat') : 'flat',
-        },
-        silver: {
-          gramAED: data.silver.gramAED,
-          ozAED: data.silver.ozAED,
-          trend: prev ? (data.silver.gramAED > prev.silver.gramAED ? 'up' : data.silver.gramAED < prev.silver.gramAED ? 'down' : 'flat') : 'flat',
-        },
-      }))
-      setLastUpdated(data.updatedAt)
-    } catch {
-      // keep previous prices on error
-    } finally {
-      setLoading(false)
-    }
-  }, [])
-
-  useEffect(() => {
-    fetchPrices()
-    const interval = setInterval(fetchPrices, REFRESH_MS)
-    return () => clearInterval(interval)
-  }, [fetchPrices])
-
+  const { prices, loading } = useSpotPrice()
   const isDark = theme === 'dark'
 
   return (

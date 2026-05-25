@@ -163,36 +163,6 @@ export default function InvestmentGuideSection() {
           )
         })}
 
-        {/* ── Bottom stat strip ───────────────────────────────────── */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          style={{
-            display: "flex", alignItems: "center", justifyContent: "space-between",
-            flexWrap: "wrap", gap: 24, marginTop: 48,
-            padding: "32px 40px",
-            background: "#1a1408",
-            borderTop: `3px solid ${GOLD}`,
-          }}
-        >
-          <p style={{ fontSize: 14, color: "#8a7a5a", fontWeight: 300, margin: 0, maxWidth: 400 }}>
-            Build long-term financial confidence through certified gold and silver investments.
-          </p>
-          <div style={{ display: "flex", gap: 48 }}>
-            {[
-              { num: "999.9", lbl: "Purity standard" },
-              { num: "24K",   lbl: "Gold grade" },
-              { num: "UAE",   lbl: "Top bullion hub" },
-            ].map((s) => (
-              <div key={s.lbl} style={{ textAlign: "center" }}>
-                <div style={{ fontFamily: "var(--font-dm-sans)", fontSize: 28, color: GOLD, lineHeight: 1 }}>{s.num}</div>
-                <div style={{ fontSize: 10, letterSpacing: "2px", textTransform: "uppercase", color: "#5a4e38", marginTop: 4 }}>{s.lbl}</div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
 
       </div>
     </section>
