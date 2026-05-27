@@ -6,7 +6,6 @@ import SpotPriceTicker from '@/components/shared/SpotPriceTicker'
 import WhatsAppButton from '@/components/shared/WhatsAppButton'
 import Navbar from '@/components/home/Navbar'
 import HeroSlideshow from '@/components/home/HeroSlideshow'
-import AboutSection from '@/components/home/AboutSection'
 import GoldBullionSection from '@/components/home/GoldBullionSection'
 import SilverBullionSection from '@/components/home/SilverBullionSection'
 import WhyInvestSection from '@/components/home/WhyInvestSection'
@@ -32,7 +31,6 @@ export default function HomePage() {
       <SpotPriceTicker theme="light" />
       <Navbar cartCount={cartCount} />
       <HeroSlideshow />
-      <AboutSection />
       <GoldBullionSection />
       <SilverBullionSection />
       <LivePriceSection />
