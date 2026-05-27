@@ -1,0 +1,572 @@
+
+> nextjs-mongo-template@0.1.0 dev
+> next dev --hostname 0.0.0.0 --port 3008
+
+   ▲ Next.js 15.5.12
+   - Local:        http://localhost:3008
+   - Network:      http://0.0.0.0:3008
+   - Environments: .env
+   - Experiments (use with caution):
+     · cpus: 1
+
+ ✓ Starting...
+ ✓ Ready in 2.6s
+ ○ Compiling / ...
+
+[1m[33mwarn[39m[22m - The class `duration-[1200ms]` is ambiguous and matches multiple utilities.
+[1m[33mwarn[39m[22m - If this is content and not a class, replace it with `duration-&lsqb;1200ms&rsqb;` to silence this warning.
+ ✓ Compiled / in 4.9s (2626 modules)
+ GET / 200 in 6271ms
+ ✓ Compiled in 522ms (1252 modules)
+ ○ Compiling /api/spot-prices ...
+ ✓ Compiled /api/spot-prices in 615ms (2632 modules)
+ GET /api/spot-prices 200 in 1949ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 757ms (2650 modules)
+ GET /about 200 in 1312ms
+ GET / 200 in 1113ms
+ GET /api/spot-prices 200 in 101ms
+ GET /about 200 in 94ms
+ GET /about 200 in 800ms
+ GET /api/spot-prices 200 in 693ms
+ ○ Compiling /sell ...
+ ✓ Compiled /sell in 2.9s (2659 modules)
+ GET /sell 200 in 3496ms
+ ○ Compiling /faq ...
+ ✓ Compiled /faq in 1471ms (2670 modules)
+ GET /faq 200 in 1797ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 1989ms (2687 modules)
+ GET /contact 200 in 2177ms
+ GET /about 200 in 123ms
+ GET /api/spot-prices 200 in 118ms
+ GET /api/spot-prices 200 in 620ms
+ ✓ Compiled in 1162ms (1272 modules)
+ GET /about 200 in 61ms
+ ✓ Compiled in 675ms (1416 modules)
+ ✓ Compiled in 1115ms (2688 modules)
+ GET /about 200 in 147ms
+ GET /api/spot-prices 200 in 40ms
+ ✓ Compiled in 1041ms (2688 modules)
+ GET /about 200 in 79ms
+ ✓ Compiled in 1083ms (2688 modules)
+ GET /about 200 in 80ms
+ GET /about 200 in 404ms
+ GET /api/spot-prices 200 in 830ms
+ GET /api/spot-prices 200 in 26ms
+ GET /api/spot-prices 200 in 591ms
+ GET /api/spot-prices 200 in 594ms
+ ✓ Compiled in 1044ms (1272 modules)
+ GET /about 200 in 34ms
+ ✓ Compiled in 677ms (1416 modules)
+ ✓ Compiled in 539ms (1416 modules)
+ ✓ Compiled in 761ms (1272 modules)
+ GET /about 200 in 155ms
+ GET /api/spot-prices 200 in 42ms
+ GET /api/spot-prices 200 in 782ms
+ ✓ Compiled in 1446ms (2688 modules)
+ GET /about 200 in 131ms
+ GET /api/spot-prices 200 in 39ms
+ ✓ Compiled in 776ms (1272 modules)
+ GET /about 200 in 45ms
+ ✓ Compiled in 642ms (1416 modules)
+ GET /api/spot-prices 200 in 660ms
+ ✓ Compiled in 1354ms (2688 modules)
+ GET /about 200 in 125ms
+ GET /api/spot-prices 200 in 571ms
+ GET /api/spot-prices 200 in 24ms
+ ✓ Compiled in 1193ms (2688 modules)
+ GET /about 200 in 91ms
+ ✓ Compiled in 925ms (2688 modules)
+ GET /about 200 in 107ms
+ ✓ Compiled in 1093ms (2688 modules)
+ GET /about 200 in 70ms
+ ✓ Compiled in 728ms (1272 modules)
+ GET /about 200 in 42ms
+ ✓ Compiled in 866ms (2688 modules)
+ GET /about 200 in 74ms
+ GET /api/spot-prices 200 in 1073ms
+ GET /about 200 in 385ms
+ GET /api/spot-prices 200 in 21ms
+ GET /api/spot-prices 200 in 751ms
+ GET /api/spot-prices 200 in 29ms
+ GET /api/spot-prices 200 in 588ms
+ GET /api/spot-prices 200 in 16ms
+ GET /about 200 in 564ms
+ GET /api/spot-prices 200 in 994ms
+ GET /api/spot-prices 200 in 655ms
+ ✓ Compiled in 700ms (1416 modules)
+ ✓ Compiled in 888ms (1272 modules)
+ GET /about 200 in 112ms
+ GET /about 200 in 370ms
+ GET /about 200 in 720ms
+ GET /api/spot-prices 200 in 72ms
+ GET /api/spot-prices 200 in 643ms
+ ✓ Compiled in 972ms (1272 modules)
+ GET /about 200 in 32ms
+ ✓ Compiled in 707ms (1416 modules)
+ GET /api/spot-prices 200 in 204ms
+ GET / 200 in 226ms
+ GET /about 200 in 1240ms
+ GET /about 200 in 74ms
+ GET /api/spot-prices 200 in 687ms
+ GET /api/spot-prices 200 in 16ms
+ GET /api/spot-prices 200 in 934ms
+ GET /api/spot-prices 200 in 29ms
+ ✓ Compiled in 684ms (1416 modules)
+ ✓ Compiled in 897ms (1272 modules)
+ GET /about 200 in 73ms
+ GET /about 200 in 1151ms
+ GET /api/spot-prices 200 in 646ms
+ GET /api/spot-prices 200 in 27ms
+ GET /api/spot-prices 200 in 579ms
+ GET /api/spot-prices 200 in 23ms
+ GET /api/spot-prices 200 in 1663ms
+ GET /api/spot-prices 200 in 23ms
+ GET /api/spot-prices 200 in 647ms
+ ✓ Compiled in 1393ms (2688 modules)
+ GET /about 200 in 127ms
+ ✓ Compiled in 1352ms (2688 modules)
+ GET /about 200 in 90ms
+ GET /api/spot-prices 200 in 32ms
+ ✓ Compiled /api/spot-prices in 1848ms (2688 modules)
+ GET /about 200 in 210ms
+ GET /api/spot-prices 200 in 1249ms
+ ✓ Compiled in 799ms (1272 modules)
+ GET /about 200 in 39ms
+ ✓ Compiled in 515ms (1416 modules)
+ ✓ Compiled in 526ms (1416 modules)
+ ✓ Compiled in 760ms (1272 modules)
+ GET /about 200 in 141ms
+ ✓ Compiled in 533ms (1416 modules)
+ ✓ Compiled in 747ms (1272 modules)
+ GET /about 200 in 103ms
+ GET /api/spot-prices 200 in 34ms
+ ✓ Compiled in 600ms (1416 modules)
+ ✓ Compiled in 870ms (1272 modules)
+ GET /about 200 in 88ms
+ GET /api/spot-prices 200 in 877ms
+ ✓ Compiled in 535ms (1416 modules)
+ ✓ Compiled in 800ms (1272 modules)
+ GET /about 200 in 100ms
+ ✓ Compiled in 919ms (1272 modules)
+ GET /about 200 in 39ms
+ ✓ Compiled in 505ms (1416 modules)
+ GET /api/spot-prices 200 in 689ms
+ GET /api/spot-prices 200 in 692ms
+ GET /api/spot-prices 200 in 26ms
+ GET /api/spot-prices 200 in 691ms
+ GET /api/spot-prices 200 in 24ms
+ GET /api/spot-prices 200 in 832ms
+ GET /api/spot-prices 200 in 22ms
+ GET /api/spot-prices 200 in 621ms
+ GET /api/spot-prices 200 in 24ms
+ ✓ Compiled in 743ms (1416 modules)
+ ✓ Compiled in 919ms (1272 modules)
+ GET /about 200 in 98ms
+ ✓ Compiled in 767ms (1272 modules)
+ GET /about 200 in 36ms
+ ✓ Compiled in 508ms (1416 modules)
+ ✓ Compiled in 738ms (1272 modules)
+ GET /about 200 in 92ms
+ ✓ Compiled in 471ms (1416 modules)
+ ✓ Compiled in 502ms (1416 modules)
+ ✓ Compiled in 773ms (1272 modules)
+ GET /about 200 in 97ms
+ GET /api/spot-prices 200 in 679ms
+ ✓ Compiled in 760ms (1272 modules)
+ GET /about 200 in 35ms
+ ✓ Compiled in 504ms (1416 modules)
+ ✓ Compiled in 540ms (1416 modules)
+ ✓ Compiled in 904ms (1272 modules)
+ GET /about 200 in 71ms
+ ✓ Compiled in 846ms (1272 modules)
+ GET /about 200 in 61ms
+ ✓ Compiled in 562ms (1416 modules)
+ ✓ Compiled in 1313ms (2688 modules)
+ GET /about 200 in 84ms
+ ✓ Compiled in 526ms (1416 modules)
+ ✓ Compiled in 742ms (1272 modules)
+ GET /about 200 in 69ms
+ GET /api/spot-prices 200 in 33ms
+ ✓ Compiled in 1606ms (2688 modules)
+ GET /about 200 in 358ms
+ ✓ Compiled in 1446ms (2688 modules)
+ GET /about 200 in 70ms
+ ✓ Compiled in 816ms (1272 modules)
+ GET /about 200 in 45ms
+ ✓ Compiled in 547ms (1416 modules)
+ GET /api/spot-prices 200 in 1087ms
+ ✓ Compiled in 504ms (1416 modules)
+ ✓ Compiled in 754ms (1272 modules)
+ GET /about 200 in 74ms
+ ✓ Compiled in 780ms (1272 modules)
+ GET /about 200 in 41ms
+ ✓ Compiled in 505ms (1416 modules)
+ ✓ Compiled in 528ms (1416 modules)
+ ✓ Compiled in 874ms (1272 modules)
+ GET /about 200 in 73ms
+ GET /api/spot-prices 200 in 49ms
+ GET /api/spot-prices 200 in 786ms
+ GET /api/spot-prices 200 in 34ms
+ GET /api/spot-prices 200 in 577ms
+ ✓ Compiled in 786ms (1416 modules)
+ ✓ Compiled in 936ms (1272 modules)
+ GET /about 200 in 110ms
+ GET /api/spot-prices 200 in 30ms
+ ✓ Compiled in 1288ms (2688 modules)
+ GET /about 200 in 88ms
+ ✓ Compiled in 609ms (1416 modules)
+ ✓ Compiled in 883ms (1272 modules)
+ GET /about 200 in 87ms
+ GET /api/spot-prices 200 in 1062ms
+ ✓ Compiled in 1262ms (2688 modules)
+ GET /about 200 in 69ms
+ GET /api/spot-prices 200 in 695ms
+ GET /api/spot-prices 200 in 680ms
+ ✓ Compiled in 1394ms (2688 modules)
+ GET /about 200 in 102ms
+ GET /api/spot-prices 200 in 43ms
+ ✓ Compiled in 1370ms (2688 modules)
+ GET /about 200 in 63ms
+ GET /api/spot-prices 200 in 618ms
+ ✓ Compiled in 1275ms (2688 modules)
+ GET /about 200 in 63ms
+ ✓ Compiled in 1355ms (2688 modules)
+ GET /about 200 in 70ms
+ GET /api/spot-prices 200 in 24ms
+ GET /about 200 in 1057ms
+ GET /api/spot-prices 200 in 1793ms
+ GET /api/spot-prices 200 in 45ms
+ GET /api/spot-prices 200 in 670ms
+ GET /api/spot-prices 200 in 30ms
+ GET /api/spot-prices 200 in 772ms
+ GET /api/spot-prices 200 in 28ms
+ GET /api/spot-prices 200 in 2074ms
+ GET /api/spot-prices 200 in 20ms
+ GET /api/spot-prices 200 in 562ms
+ GET /api/spot-prices 200 in 578ms
+ GET /api/spot-prices 200 in 26ms
+ GET /api/spot-prices 200 in 877ms
+ GET /api/spot-prices 200 in 39ms
+ GET /api/spot-prices 200 in 561ms
+ GET /api/spot-prices 200 in 615ms
+ GET /api/spot-prices 200 in 34ms
+ GET /api/spot-prices 200 in 764ms
+ GET /api/spot-prices 200 in 551ms
+ ✓ Compiled in 1170ms (2688 modules)
+ GET /about 200 in 47ms
+ GET /api/spot-prices 200 in 16ms
+ GET /api/spot-prices 200 in 606ms
+ GET /api/spot-prices 200 in 10ms
+ GET /api/spot-prices 200 in 1048ms
+ GET /api/spot-prices 200 in 557ms
+ GET /api/spot-prices 200 in 44ms
+ GET /api/spot-prices 200 in 563ms
+ GET /api/spot-prices 200 in 551ms
+ GET /api/spot-prices 200 in 28ms
+ GET /api/spot-prices 200 in 746ms
+ GET /api/spot-prices 200 in 32ms
+ GET /api/spot-prices 200 in 571ms
+ GET /api/spot-prices 200 in 25ms
+ ○ Compiling /sell ...
+ ✓ Compiled /sell in 3.5s (1422 modules)
+ GET /sell 200 in 4286ms
+ ○ Compiling /faq ...
+ ✓ Compiled /faq in 2.4s (1429 modules)
+ GET /faq 200 in 2628ms
+ GET /contact 200 in 92ms
+ ○ Compiling /shop ...
+ ✓ Compiled /shop in 5.2s (2694 modules)
+ GET / 200 in 2342ms
+ GET /shop 200 in 6256ms
+ GET /api/spot-prices 200 in 5497ms
+ GET /about 200 in 179ms
+ GET /api/spot-prices 200 in 21ms
+ GET /api/spot-prices 200 in 750ms
+ GET /api/spot-prices 200 in 27ms
+ GET /api/spot-prices 200 in 550ms
+ GET /api/spot-prices 200 in 19ms
+ ✓ Compiled in 1425ms (2696 modules)
+ GET /about 200 in 64ms
+ GET /api/spot-prices 200 in 550ms
+ GET /api/spot-prices 200 in 147ms
+ GET /about 200 in 1700ms
+ GET /api/spot-prices 200 in 19ms
+ GET /api/spot-prices 200 in 950ms
+ GET /api/spot-prices 200 in 13ms
+ GET /api/spot-prices 200 in 601ms
+ ✓ Compiled in 1141ms (2696 modules)
+ GET /about 200 in 62ms
+ GET /api/spot-prices 200 in 16ms
+ ✓ Compiled in 804ms (2696 modules)
+ GET /about 200 in 69ms
+ GET /api/spot-prices 200 in 559ms
+ GET /api/spot-prices 200 in 15ms
+ GET /api/spot-prices 200 in 1262ms
+ ✓ Compiled in 1079ms (2696 modules)
+ GET /about 200 in 51ms
+ GET /api/spot-prices 200 in 21ms
+ GET /api/spot-prices 200 in 570ms
+ GET /about 200 in 1354ms
+ GET /api/spot-prices 200 in 30ms
+ ✓ Compiled in 1155ms (2696 modules)
+ GET /about 200 in 62ms
+ GET /api/spot-prices 200 in 601ms
+ GET /api/spot-prices 200 in 542ms
+ GET /api/spot-prices 200 in 17ms
+ GET /api/spot-prices 200 in 971ms
+ ✓ Compiled in 1510ms (2696 modules)
+ GET /about 200 in 123ms
+ GET /api/spot-prices 200 in 38ms
+ GET /api/spot-prices 200 in 630ms
+ GET /api/spot-prices 200 in 583ms
+ ✓ Compiled in 1381ms (2696 modules)
+ GET /about 200 in 77ms
+ GET /api/spot-prices 200 in 20ms
+ GET /api/spot-prices 200 in 767ms
+ ✓ Compiled in 1408ms (2696 modules)
+ GET /about 200 in 113ms
+ GET /api/spot-prices 200 in 34ms
+ ✓ Compiled in 1041ms (2696 modules)
+ GET /about 200 in 104ms
+ ✓ Compiled in 1047ms (2696 modules)
+ GET /about 200 in 71ms
+ GET /api/spot-prices 200 in 1099ms
+ GET /api/spot-prices 200 in 51ms
+ GET /api/spot-prices 200 in 756ms
+ GET /api/spot-prices 200 in 755ms
+ GET /api/spot-prices 200 in 42ms
+ GET /api/spot-prices 200 in 991ms
+ GET /api/spot-prices 200 in 37ms
+ GET /api/spot-prices 200 in 605ms
+ GET /api/spot-prices 200 in 39ms
+ GET /api/spot-prices 200 in 634ms
+ GET /api/spot-prices 200 in 38ms
+ GET /api/spot-prices 200 in 852ms
+ GET /api/spot-prices 200 in 34ms
+ GET /api/spot-prices 200 in 594ms
+ GET /api/spot-prices 200 in 28ms
+ GET /api/spot-prices 200 in 695ms
+ GET /api/spot-prices 200 in 27ms
+ GET /api/spot-prices 200 in 940ms
+ GET /api/spot-prices 200 in 25ms
+ GET /api/spot-prices 200 in 660ms
+ GET /api/spot-prices 200 in 29ms
+ GET /api/spot-prices 200 in 668ms
+ GET /api/spot-prices 200 in 23ms
+ GET /api/spot-prices 200 in 788ms
+ GET /api/spot-prices 200 in 573ms
+ GET /api/spot-prices 200 in 31ms
+ GET /api/spot-prices 200 in 619ms
+ GET /api/spot-prices 200 in 39ms
+ GET /api/spot-prices 200 in 865ms
+ GET /api/spot-prices 200 in 35ms
+ GET /api/spot-prices 200 in 620ms
+ GET /api/spot-prices 200 in 19ms
+ GET /api/spot-prices 200 in 702ms
+ GET /api/spot-prices 200 in 30ms
+ GET /api/spot-prices 200 in 966ms
+ GET /api/spot-prices 200 in 567ms
+ GET /api/spot-prices 200 in 41ms
+ GET /api/spot-prices 200 in 642ms
+ GET /api/spot-prices 200 in 14ms
+ GET /api/spot-prices 200 in 612ms
+ ✓ Compiled in 1538ms (2696 modules)
+ GET /about 200 in 81ms
+ GET /api/spot-prices 200 in 27ms
+ ✓ Compiled in 1113ms (2696 modules)
+ GET /about 200 in 90ms
+ GET /api/spot-prices 200 in 784ms
+ GET /api/spot-prices 200 in 650ms
+ GET /api/spot-prices 200 in 26ms
+ GET /api/spot-prices 200 in 555ms
+ GET /api/spot-prices 200 in 29ms
+ GET /api/spot-prices 200 in 832ms
+ GET /api/spot-prices 200 in 44ms
+ GET /api/spot-prices 200 in 741ms
+ GET /api/spot-prices 200 in 34ms
+ ✓ Compiled in 1449ms (2696 modules)
+ GET /about 200 in 79ms
+ GET /api/spot-prices 200 in 675ms
+ GET /api/spot-prices 200 in 1038ms
+ GET /api/spot-prices 200 in 60ms
+ GET /api/spot-prices 200 in 650ms
+ GET /api/spot-prices 200 in 45ms
+ GET /api/spot-prices 200 in 630ms
+ GET /api/spot-prices 200 in 29ms
+ GET /api/spot-prices 200 in 825ms
+ GET /api/spot-prices 200 in 15ms
+ GET /api/spot-prices 200 in 549ms
+ GET /api/spot-prices 200 in 29ms
+ ✓ Compiled in 1383ms (2696 modules)
+ GET /about 200 in 74ms
+ GET /api/spot-prices 200 in 657ms
+ ✓ Compiled in 1405ms (2677 modules)
+ GET /about 200 in 223ms
+ ✓ Compiled /api/spot-prices in 192ms (1422 modules)
+ GET /api/spot-prices 200 in 981ms
+ GET /api/spot-prices 200 in 27ms
+ GET /api/spot-prices 200 in 853ms
+ ✓ Compiled in 805ms (1422 modules)
+ ✓ Compiled in 2.3s (1274 modules)
+ GET /about 200 in 381ms
+ GET /api/spot-prices 200 in 59ms
+ GET /api/spot-prices 200 in 619ms
+ GET /api/spot-prices 200 in 36ms
+ GET /api/spot-prices 200 in 622ms
+ GET /api/spot-prices 200 in 40ms
+ GET /api/spot-prices 200 in 968ms
+ ✓ Compiled in 1542ms (2696 modules)
+ GET /api/spot-prices 200 in 235ms
+ GET /about 200 in 244ms
+ GET /api/spot-prices 200 in 630ms
+ GET /api/spot-prices 200 in 651ms
+ GET /api/spot-prices 200 in 27ms
+ GET /api/spot-prices 200 in 570ms
+ GET /api/spot-prices 200 in 838ms
+ GET /api/spot-prices 200 in 25ms
+ ✓ Compiled in 1456ms (2696 modules)
+ GET /about 200 in 133ms
+ ✓ Compiled in 1389ms (2696 modules)
+ GET /about 200 in 69ms
+ GET /api/spot-prices 200 in 634ms
+ GET /api/spot-prices 200 in 22ms
+ GET /api/spot-prices 200 in 652ms
+ ✓ Compiled in 719ms (1422 modules)
+ ✓ Compiled in 994ms (1274 modules)
+ GET /about 200 in 73ms
+ ✓ Compiled in 852ms (1274 modules)
+ GET /about 200 in 39ms
+ ✓ Compiled in 551ms (1422 modules)
+ GET /api/spot-prices 200 in 69ms
+ ✓ Compiled in 803ms (1274 modules)
+ GET /about 200 in 55ms
+ ✓ Compiled in 529ms (1422 modules)
+ GET /api/spot-prices 200 in 1101ms
+ GET /api/spot-prices 200 in 638ms
+ GET /api/spot-prices 200 in 37ms
+ ✓ Compiled in 1565ms (2696 modules)
+ GET /about 200 in 138ms
+ ✓ Compiled in 1363ms (2696 modules)
+ GET /about 200 in 81ms
+ GET /api/spot-prices 200 in 624ms
+ GET /api/spot-prices 200 in 51ms
+ GET /api/spot-prices 200 in 1322ms
+ GET /api/spot-prices 200 in 613ms
+ ✓ Compiled in 1030ms (1274 modules)
+ GET /about 200 in 57ms
+ ✓ Compiled in 709ms (1422 modules)
+ ✓ Compiled in 1226ms (2696 modules)
+ GET /about 200 in 139ms
+ GET /api/spot-prices 200 in 110ms
+ GET /api/spot-prices 200 in 726ms
+ ✓ Compiled in 1724ms (2696 modules)
+ GET /about 200 in 361ms
+ ✓ Compiled in 1027ms (2696 modules)
+ GET /about 200 in 72ms
+ GET /api/spot-prices 200 in 76ms
+ GET /api/spot-prices 200 in 1364ms
+ ✓ Compiled in 1425ms (2696 modules)
+ GET /about 200 in 130ms
+ GET /api/spot-prices 200 in 45ms
+ GET /api/spot-prices 200 in 894ms
+ ✓ Compiled in 1396ms (2696 modules)
+ GET /about 200 in 96ms
+ GET /api/spot-prices 200 in 24ms
+ GET /api/spot-prices 200 in 681ms
+ GET /api/spot-prices 200 in 635ms
+ GET /api/spot-prices 200 in 16ms
+ GET /api/spot-prices 200 in 847ms
+ ✓ Compiled in 1335ms (2696 modules)
+ GET /about 200 in 97ms
+ GET /api/spot-prices 200 in 36ms
+ ✓ Compiled in 1361ms (2696 modules)
+ GET /about 200 in 80ms
+ GET /api/spot-prices 200 in 621ms
+ ✓ Compiled in 1004ms (2696 modules)
+ GET /about 200 in 68ms
+ GET /api/spot-prices 200 in 40ms
+ GET /api/spot-prices 200 in 658ms
+ ✓ Compiled in 1416ms (2696 modules)
+ GET /about 200 in 97ms
+ ✓ Compiled in 1087ms (2696 modules)
+ GET /about 200 in 67ms
+ ✓ Compiled in 1044ms (2696 modules)
+ GET /about 200 in 85ms
+ GET /api/spot-prices 200 in 68ms
+ GET /api/spot-prices 200 in 1017ms
+ GET /api/spot-prices 200 in 16ms
+ ✓ Compiled in 4.7s (2696 modules)
+ GET /about 200 in 736ms
+ ✓ Compiled in 3.9s (2696 modules)
+ GET /about 200 in 421ms
+ ✓ Compiled in 1225ms (2696 modules)
+ GET /about 200 in 102ms
+ GET /about 200 in 1078ms
+ GET /api/spot-prices 200 in 736ms
+ GET /api/spot-prices 200 in 25ms
+ GET /api/spot-prices 200 in 1431ms
+ GET /api/spot-prices 200 in 20ms
+ ✓ Compiled in 1439ms (2696 modules)
+ GET /about 200 in 92ms
+ GET /api/spot-prices 200 in 891ms
+ ✓ Compiled in 1379ms (2696 modules)
+ GET /about 200 in 80ms
+ ✓ Compiled in 1052ms (2696 modules)
+ GET /about 200 in 70ms
+ GET /api/spot-prices 200 in 33ms
+ ✓ Compiled in 1012ms (2696 modules)
+ GET /about 200 in 120ms
+ ✓ Compiled in 1344ms (2696 modules)
+ GET /about 200 in 74ms
+ GET /api/spot-prices 200 in 727ms
+ ✓ Compiled in 875ms (1274 modules)
+ ✓ Compiled in 516ms (1422 modules)
+ GET /about 200 in 528ms
+ ✓ Compiled in 878ms (1274 modules)
+ GET /about 200 in 47ms
+ ✓ Compiled in 545ms (1422 modules)
+ GET /api/spot-prices 200 in 47ms
+ ✓ Compiled in 756ms (1422 modules)
+ ✓ Compiled in 1716ms (1274 modules)
+ GET /about 200 in 243ms
+ ✓ Compiled in 810ms (1274 modules)
+ GET /about 200 in 43ms
+ ✓ Compiled in 900ms (1422 modules)
+ GET /api/spot-prices 200 in 774ms
+ GET /api/spot-prices 200 in 27ms
+ ✓ Compiled in 1726ms (2696 modules)
+ GET /about 200 in 73ms
+ GET /api/spot-prices 200 in 1114ms
+ ✓ Compiled in 703ms (1422 modules)
+ ✓ Compiled in 972ms (1274 modules)
+ GET /about 200 in 93ms
+ ✓ Compiled in 555ms (1422 modules)
+ ✓ Compiled in 823ms (1274 modules)
+ GET /about 200 in 79ms
+ GET /api/spot-prices 200 in 28ms
+ ✓ Compiled in 532ms (1422 modules)
+ ✓ Compiled in 790ms (1274 modules)
+ GET /about 200 in 99ms
+ ✓ Compiled in 578ms (1422 modules)
+ ✓ Compiled in 829ms (1274 modules)
+ GET /about 200 in 117ms
+ GET /about 200 in 1177ms
+ GET /api/spot-prices 200 in 739ms
+ GET /api/spot-prices 200 in 47ms
+ GET /api/spot-prices 200 in 669ms
+ GET /api/spot-prices 200 in 21ms
+ GET /api/spot-prices 200 in 1038ms
+ GET /api/spot-prices 200 in 15ms
+ GET /api/spot-prices 200 in 592ms
+ ✓ Compiled in 1599ms (2694 modules)
+ GET /about 200 in 88ms
+ GET /api/spot-prices 200 in 20ms
+ ✓ Compiled in 956ms (2694 modules)
+ GET /about 200 in 72ms
+ GET / 200 in 121ms
+ GET /api/spot-prices 200 in 679ms
+ GET /api/spot-prices 200 in 850ms
+ GET /api/spot-prices 200 in 38ms
+^C

@@ -744,7 +744,7 @@ function SmarterApproachSection() {
         </motion.div>
 
         {/* ── Display heading — 2 lines ── */}
-        <div className="mb-10 lg:mb-12 overflow-hidden">
+        <div className="mb-6 lg:mb-6 overflow-hidden">
           {/* Line 1 */}
           <motion.div
             initial={{ y: '110%' }}
@@ -774,20 +774,12 @@ function SmarterApproachSection() {
           initial={{ scaleX: 0, opacity: 0 }}
           animate={inView ? { scaleX: 1, opacity: 1 } : {}}
           transition={{ duration: 1.3, delay: 0.28 }}
-          className="origin-left mb-14 lg:mb-16 h-px bg-gradient-to-r from-[#C9982A] via-[#C9982A]/45 to-transparent"
+          className="origin-left mb-10 lg:mb-12 h-px bg-gradient-to-r from-[#C9982A] via-[#C9982A]/45 to-transparent"
         />
 
         {/* ── Body: vertical gold line + editorial text ── */}
-        <div className="flex gap-10 lg:gap-16">
+        <div className="flex gap-8 lg:gap-8">
 
-          {/* Tall vertical gold accent line — scaleY from top */}
-          <motion.div
-            initial={{ scaleY: 0 }}
-            animate={inView ? { scaleY: 1 } : {}}
-            transition={{ duration: 1.2, delay: 0.44 }}
-            className="origin-top hidden sm:block flex-shrink-0 w-[2px] self-stretch"
-            style={{ background: 'linear-gradient(to bottom, #C9982A 0%, rgba(201,152,42,0.45) 55%, rgba(201,152,42,0.08) 100%)' }}
-          />
 
           {/* Text column */}
           <div className="flex-1">
@@ -797,12 +789,12 @@ function SmarterApproachSection() {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.7, delay: 0.5 }}
-              className="mb-10 flex flex-wrap items-center gap-x-5 gap-y-2"
+              className="mb-6 flex flex-wrap items-center gap-x-5 gap-y-2"
             >
               {['Trust', 'Transparency', 'Informed Decisions'].map((tag, i) => (
                 <span key={i} className="flex items-center gap-3">
                   {i > 0 && <span className="hidden sm:block h-px w-6 bg-[#C9982A]/30" />}
-                  <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.36em] text-[#C9982A]">
+                  <span className="text-[12px] sm:text-[12px] font-bold uppercase tracking-[0.36em] text-[#C9982A]">
                     {tag}
                   </span>
                 </span>
