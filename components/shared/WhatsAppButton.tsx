@@ -2,7 +2,7 @@
 
 import { MessageCircle } from 'lucide-react'
 
-export default function WhatsAppButton({ phone = '+971501234567' }) {
+export default function WhatsAppButton({ phone = '+971542891916' }) {
   const message = encodeURIComponent('Hello Tora Bullion! I would like to enquire about your gold and silver products.')
   const whatsappUrl = `https://wa.me/${phone.replace(/[^0-9]/g, '')}?text=${message}`
 

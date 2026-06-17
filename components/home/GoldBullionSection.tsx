@@ -184,24 +184,14 @@ export default function GoldBullionSection() {
               className="absolute left-0 top-0 h-[100%] w-[58%] overflow-hidden rounded-3xl border border-[#C9982A]/25 shadow-[0_48px_120px_rgba(0,0,0,0.7)]"
             >
               <Image
-                src="/gold_main.jpg"
+                src="/gold_bullion/Session2-1.jpg"
                 alt="Investment grade gold bullion bars"
                 fill
                 className="object-cover transition-transform duration-[1200ms] hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               {/* Gold corner brackets */}
               <div className="pointer-events-none absolute left-4 top-4 h-10 w-10 rounded-tl-lg border-l-2 border-t-2 border-[#C9982A]/70" />
               <div className="pointer-events-none absolute bottom-4 right-4 h-10 w-10 rounded-br-lg border-b-2 border-r-2 border-[#C9982A]/40" />
-              {/* Bottom label */}
-              <div className="absolute bottom-6 left-6">
-                <div className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-[#C9982A]/30 bg-[#C9982A]/15 px-3 py-1 backdrop-blur-sm">
-                  <span className="h-1 w-1 rounded-full bg-[#E8C060]" />
-                  <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#E8C060]">Certified Bullion</span>
-                </div>
-                <p className="text-2xl font-black text-white">999.9 <span className="text-[#C9982A]">Pure</span></p>
-                <p className="text-[11px] text-white/50 tracking-wider">24K Investment Grade · UAE</p>
-              </div>
               {/* Shimmer */}
               <motion.div
                 initial={{ x: '-130%' }}
@@ -221,15 +211,11 @@ export default function GoldBullionSection() {
               className="absolute right-0 top-0 h-[46%] w-[40%] overflow-hidden rounded-2xl border border-[#C9982A]/18 shadow-[0_28px_70px_rgba(0,0,0,0.6)]"
             >
               <Image
-                src="/gold_coins.jpg"
+                src="/gold_bullion/Session2-2.jpg"
                 alt="Gold coins"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-108"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60" />
-              <div className="absolute bottom-3 left-3">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8C060]/80">Gold Coins</p>
-              </div>
             </motion.div>
 
             {/* ── Bottom-right image ── */}
@@ -241,15 +227,11 @@ export default function GoldBullionSection() {
               className="absolute bottom-0 right-0 h-[46%] w-[40%] overflow-hidden rounded-2xl border border-[#C9982A]/18 shadow-[0_28px_70px_rgba(0,0,0,0.6)]"
             >
               <Image
-                src="/gold_bars.jpg"
+                src="/gold_bullion/Session2-3.jpg"
                 alt="Gold investment bullion"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-108"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-3 left-3">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E8C060]/80">Gold Bars</p>
-              </div>
             </motion.div>
 
             {/* ── Floating stat card (overlap) ── */}

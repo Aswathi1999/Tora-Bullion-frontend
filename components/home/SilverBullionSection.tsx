@@ -99,7 +99,7 @@ export default function SilverBullionSection() {
               className="absolute top-0 inset-x-0 h-[55%] rounded-2xl overflow-hidden border border-[#C9982A]/20 shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
             >
               <Image
-                src="https://images.unsplash.com/photo-1641324115253-f66c552336cb?w=1200&q=85"
+                src="/silver_bullion/Silver 01.jpg"
                 alt="Premium silver bullion bars"
                 fill
                 className="object-cover transition-transform duration-1000 hover:scale-105"
@@ -125,7 +125,7 @@ export default function SilverBullionSection() {
               className="absolute bottom-0 left-0 w-[47%] h-[41%] rounded-2xl overflow-hidden border-[2px] border-[#C9982A]/25 shadow-[0_20px_50px_rgba(0,0,0,0.18)]"
             >
               <Image
-                src="https://images.unsplash.com/photo-1621862623900-832ef4dd24aa?w=700&q=85"
+                src="/silver_bullion/Silver 02.jpg"
                 alt="Silver coins"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
@@ -148,7 +148,7 @@ export default function SilverBullionSection() {
               className="absolute bottom-0 right-0 w-[47%] h-[41%] rounded-2xl overflow-hidden border-[2px] border-[#C9982A]/25 shadow-[0_20px_50px_rgba(0,0,0,0.18)]"
             >
               <Image
-                src="/silver_bars.jpg"
+                src="/silver_bullion/Silver 03.jpg"
                 alt="Silver bullion bars close up"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"

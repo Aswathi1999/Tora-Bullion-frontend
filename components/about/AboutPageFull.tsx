@@ -62,7 +62,7 @@ function HeroSection() {
               className="mb-9 inline-flex items-center gap-2.5 border border-[#C9982A]/30 bg-[#C9982A]/8 px-5 py-2"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[#C9982A]" />
-              <span className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#C9982A]">
+              <span className="text-[12px] font-semibold uppercase tracking-[0.32em] text-[#C9982A]">
                 About Tora Bullion
               </span>
             </motion.div>
@@ -362,7 +362,7 @@ function CoreValuesSection() {
             className="mb-4 flex items-center gap-4"
           >
             <div className="h-px w-12 bg-[#C9982A]" />
-            <span className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#C9982A]">
+            <span className="text-[12px] font-semibold uppercase tracking-[0.32em] text-[#C9982A]">
               Our Values
             </span>
           </motion.div>

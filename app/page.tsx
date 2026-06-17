@@ -14,6 +14,8 @@ import TrustSection from '@/components/home/TrustSection'
 import SellSection from '@/components/home/SellSection'
 import Footer from '@/components/home/Footer'
 import MobileStickyCTA from '@/components/home/MobileStickyCTA'
+import CartDrawer from '@/components/home/CartDrawer'
+import { useCart } from '@/contexts/CartContext'
 
 const LivePriceSection = dynamic(() => import('@/components/home/LivePriceSection'))
 const InvestmentGuideSection = dynamic(() => import('@/components/home/PreciousMetalsInvestmentGuide'))
@@ -21,29 +23,28 @@ const DealsOfTheDay = dynamic(() => import('@/components/home/DealsOfTheDay'))
 const ShopSection = dynamic(() => import('@/components/home/ShopSection'))
 
 export default function HomePage() {
-  const [cartCount, setCartCount] = useState(0)
   const [activeWeight, setActiveWeight] = useState(null)
-
-  const onAddToCart = () => setCartCount(c => c + 1)
+  const { cartCount, addToCart, isCartOpen, openCart, closeCart } = useCart()
 
   return (
     <div className="min-h-screen bg-white font-[family-name:var(--font-dm-sans)]">
       <SpotPriceTicker theme="light" />
-      <Navbar cartCount={cartCount} />
+      <Navbar cartCount={cartCount} onCartClick={openCart} />
       <HeroSlideshow />
       <GoldBullionSection />
       <SilverBullionSection />
       <LivePriceSection />
       <WhyInvestSection />
       <InvestmentGuideSection/>
-      <DealsOfTheDay activeWeight={activeWeight} setActiveWeight={setActiveWeight} onAddToCart={onAddToCart} />
+      <DealsOfTheDay activeWeight={activeWeight} setActiveWeight={setActiveWeight} onAddToCart={addToCart} />
       <GoldBarBanner />
-      <ShopSection activeWeight={activeWeight} setActiveWeight={setActiveWeight} onAddToCart={onAddToCart} />
+      <ShopSection activeWeight={activeWeight} setActiveWeight={setActiveWeight} onAddToCart={addToCart}  />
       <TrustSection />
       <SellSection />
       <Footer />
       <MobileStickyCTA cartCount={cartCount} />
       <WhatsAppButton />
+      <CartDrawer open={isCartOpen} onClose={closeCart} />
     </div>
   )
 }

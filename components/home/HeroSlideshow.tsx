@@ -10,21 +10,21 @@ const heroSlides = [
     subtitle: 'An irreplaceable destination to buy, sell, and invest in gold & silver in the UAE.',
     cta: 'Live Gold Price',
     ctaHref: '#live-price',
-    image: 'https://images.unsplash.com/photo-1610375461369-d613b564f4c4?w=1200&q=80',
+    image: '/hero/baner 1 tora.jpg',
   },
   {
     title: 'Reliable Bullion Dealer in UAE',
     subtitle: 'Trusted gold and silver bullion from the UAE\'s leading bullion dealers.',
     cta: 'Explore Bullion',
     ctaHref: '#shop',
-    image: 'https://images.pexels.com/photos/8442342/pexels-photo-8442342.jpeg?w=1200&q=80',
+    image: '/hero/baner 2 tora.jpg',
   },
   {
     title: 'Uncompromised Standards for Gold and Silver Bars',
     subtitle: 'Certified bullion, transparent pricing, and global purity standards.',
     cta: 'Buy Gold Bars',
     ctaHref: '#shop',
-    image: '/hero_image_3.jpg',
+    image: '/hero/banner 3 tora.jpg',
   },
 ]
 
@@ -38,7 +38,7 @@ export default function HeroSlideshow() {
 
   return (
     <section className="relative bg-[#F7F5F2] overflow-hidden">
-      <div className="relative h-[400px] md:h-[500px]">
+      <div className="relative h-[500px] md:h-[650px]">
         {heroSlides.map((slide, i) => (
           <div
             key={i}

@@ -2,7 +2,11 @@
 
 import Image from 'next/image'
 import { Heart } from 'lucide-react'
+import { ShoppingCart } from 'lucide-react'
 import { products } from '@/lib/data/products'
+import { useCart } from '@/contexts/CartContext'
+import { useAuth } from '@/contexts/AuthContext'
+import { useRouter } from 'next/navigation'
 
 const weightCategories = [
   { id: '1g', label: '1g', weight: 1 },
@@ -15,7 +19,16 @@ const weightCategories = [
 
 const featuredProducts = products.filter(p => p.isFeatured).slice(0, 4)
 
-export default function DealsOfTheDay({ activeWeight, setActiveWeight, onAddToCart }) {
+export default function DealsOfTheDay({ activeWeight, setActiveWeight, onAddToCart }: { activeWeight: number | null; setActiveWeight: (w: number | null) => void; onAddToCart: (item: any) => void }) {
+  const { cartItems, openCart } = useCart()
+  const { isLoggedIn } = useAuth()
+  const router = useRouter()
+
+  const handleAddToCart = (product: any) => {
+    if (!isLoggedIn) { router.push('/login'); return }
+    onAddToCart({ id: product.id, title: product.title, image: product.image, weightGrams: product.weightGrams, purity: product.purity })
+  }
+
   return (
     <section className="py-10 bg-white">
       <div className="max-w-[1400px] mx-auto px-4 md:px-6">
@@ -85,12 +98,22 @@ export default function DealsOfTheDay({ activeWeight, setActiveWeight, onAddToCa
               <div className="p-3">
                 <h3 className="text-sm font-bold text-[#111111] mb-1">{product.title}</h3>
                 <p className="text-xs text-[#777777] mb-2">{product.weightGrams}g • {product.purity}</p>
-                <button
-                  onClick={onAddToCart}
-                  className="w-full bg-[#2C2C2C] hover:bg-[#C9982A] text-white py-2 rounded text-xs font-bold transition-colors"
-                >
-                  Add to Cart
-                </button>
+                {cartItems.some(item => item.id === product.id) ? (
+                  <button
+                    onClick={openCart}
+                    className="w-full bg-[#C9982A] hover:bg-[#B8871A] text-white py-2 rounded text-xs font-bold transition-colors flex items-center justify-center gap-1.5"
+                  >
+                    <ShoppingCart className="w-3.5 h-3.5" />
+                    Go to Cart
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => handleAddToCart(product)}
+                    className="w-full bg-[#2C2C2C] hover:bg-[#C9982A] text-white py-2 rounded text-xs font-bold transition-colors"
+                  >
+                    Add to Cart
+                  </button>
+                )}
               </div>
             </div>
           ))}

@@ -3,9 +3,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { ShoppingCart, ChevronRight } from 'lucide-react'
 import { products } from '@/lib/data/products'
+import { useCart } from '@/contexts/CartContext'
+import { useAuth } from '@/contexts/AuthContext'
 
 const categories = [
   { id: 'gold-bars', label: 'Gold Minted Bars', metal: 'gold', type: 'bar' },
@@ -19,8 +21,16 @@ const availabilityColor = {
   made_to_order: 'bg-amber-500',
 }
 
-export default function ShopSection({ activeWeight, setActiveWeight, onAddToCart }) {
+export default function ShopSection({ activeWeight, setActiveWeight, onAddToCart }: { activeWeight: number | null; setActiveWeight: (w: number | null) => void; onAddToCart: (item: any) => void }) {
   const [activeCategory, setActiveCategory] = useState('gold-bars')
+  const { cartItems, openCart } = useCart()
+  const { isLoggedIn } = useAuth()
+  const router = useRouter()
+
+  const handleAddToCart = (product: any) => {
+    if (!isLoggedIn) { router.push('/login'); return }
+    onAddToCart({ id: product.id, title: product.title, image: product.image, weightGrams: product.weightGrams, purity: product.purity })
+  }
   const pathname = usePathname()
   const isShopPage = pathname === '/shop'
 
@@ -76,7 +86,7 @@ export default function ShopSection({ activeWeight, setActiveWeight, onAddToCart
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <button
-                  onClick={onAddToCart}
+                  onClick={() => cartItems.some(item => item.id === product.id) ? openCart() : handleAddToCart(product)}
                   className="absolute bottom-3 right-3 bg-[#C9982A] hover:bg-[#B8871A] text-white p-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <ShoppingCart className="w-4 h-4" />
@@ -101,12 +111,22 @@ export default function ShopSection({ activeWeight, setActiveWeight, onAddToCart
                   <span>•</span>
                   <span>{product.purity}</span>
                 </div>
-                <button
-                  onClick={onAddToCart}
-                  className="w-full bg-[#2C2C2C] hover:bg-[#C9982A] text-white py-2.5 rounded-md text-xs font-bold transition-colors"
-                >
-                  Add to Cart
-                </button>
+                {cartItems.some(item => item.id === product.id) ? (
+                  <button
+                    onClick={openCart}
+                    className="w-full bg-[#C9982A] hover:bg-[#B8871A] text-white py-2.5 rounded-md text-xs font-bold transition-colors flex items-center justify-center gap-1.5"
+                  >
+                    <ShoppingCart className="w-3.5 h-3.5" />
+                    Go to Cart
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => handleAddToCart(product)}
+                    className="w-full bg-[#2C2C2C] hover:bg-[#C9982A] text-white py-2.5 rounded-md text-xs font-bold transition-colors"
+                  >
+                    Add to Cart
+                  </button>
+                )}
               </div>
             </div>
           ))}

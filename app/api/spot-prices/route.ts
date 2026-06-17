@@ -12,9 +12,7 @@ export async function GET() {
       fetch('https://api.gold-api.com/price/XAG', { next: { revalidate: 60 } }),
     ])
 
-    if (!goldRes.ok || !silverRes.ok) {
-      throw new Error('Failed to fetch spot prices')
-    }
+    if (!goldRes.ok || !silverRes.ok) throw new Error('Failed to fetch spot prices')
 
     const goldData = await goldRes.json()
     const silverData = await silverRes.json()

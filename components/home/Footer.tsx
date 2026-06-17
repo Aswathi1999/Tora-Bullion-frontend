@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { MapPin, Phone, Clock, Mail } from 'lucide-react'
 
 const socialLinks = [
@@ -40,21 +41,15 @@ const socialLinks = [
   },
 ]
 
-const LOGO_URL = 'https://customer-assets.emergentagent.com/job_tora-v3-editorial/artifacts/sprhv78m_Tora%20logo%20png%20%281%29.png'
+const LOGO_URL = '/logo.png'
 
 const quickLinks = [
-  { href: '/shop', label: 'Shop' },
-  { href: '/about', label: 'About' },
-  { href: '/sell', label: 'Sell Gold' },
-  { href: '/faq', label: 'FAQ' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/about',          label: 'About' },
+  { href: '/buyback-policy', label: 'Buyback Policy' },
+  // { href: '/blog',           label: 'Blog' },
+  { href: '/contact',        label: 'Contact' },
 ]
 
-const legalLinks = [
-  { href: '#', label: 'Terms' },
-  { href: '#', label: 'Privacy' },
-  { href: '#', label: 'Returns' },
-]
 
 export default function Footer() {
   return (
@@ -98,9 +93,9 @@ export default function Footer() {
             <ul className="flex flex-col gap-2.5">
               {quickLinks.map(link => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-[#aaa] hover:text-[#C9982A] text-sm transition-colors">
+                  <Link href={link.href} className="text-[#aaa] hover:text-[#C9982A] text-sm transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -169,13 +164,6 @@ export default function Footer() {
             Tora Bullion Jewellery Co. LLC &nbsp;·&nbsp; Trade Licence No. 1106002 &nbsp;·&nbsp;
             Licensed by the Dubai Department of Economy and Tourism (DET), Dubai, UAE
           </p>
-          <div className="flex items-center gap-5">
-            {legalLinks.map(link => (
-              <a key={link.label} href={link.href} className="text-[#999] hover:text-[#C9982A] text-sm transition-colors">
-                {link.label}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </footer>
