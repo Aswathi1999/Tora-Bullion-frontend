@@ -402,7 +402,7 @@ const navLinks = [
 export default function Navbar({ cartCount, onCartClick }: { cartCount: number; onCartClick?: () => void }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
-  const { isLoggedIn } = useAuth()
+  const { isLoggedIn, user, logout } = useAuth()
   const router = useRouter()
 
   const handleCartClick = () => {
@@ -506,7 +506,27 @@ export default function Navbar({ cartCount, onCartClick }: { cartCount: number; 
             ))}
             <MobileLivePrices onClose={() => setMobileMenuOpen(false)} />
             <div className="pt-2 border-t border-[#DEDAD3]">
-              <UserMenu />
+              {isLoggedIn ? (
+                <div>
+                  <p className="px-2 py-1 text-xs text-[#888888] truncate">{user?.email}</p>
+                  <button
+                    onClick={() => { logout(); setMobileMenuOpen(false); router.push('/') }}
+                    className="w-full flex items-center gap-2 py-2 px-2 rounded text-base font-medium text-red-500 hover:bg-[#F7F5F2] transition-colors"
+                  >
+                    <LogOut className="w-4 h-4" />
+                    Sign out
+                  </button>
+                </div>
+              ) : (
+                <Link
+                  href="/login"
+                  className="flex items-center gap-2 py-2 px-2 rounded text-base font-medium text-[#111111] hover:text-[#C9982A] hover:bg-[#F7F5F2] transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <User className="w-4 h-4" />
+                  Login
+                </Link>
+              )}
             </div>
           </nav>
         </div>
