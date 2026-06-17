@@ -13,7 +13,6 @@ import GoldBarBanner from '@/components/home/GoldBarBanner'
 import TrustSection from '@/components/home/TrustSection'
 import SellSection from '@/components/home/SellSection'
 import Footer from '@/components/home/Footer'
-import MobileStickyCTA from '@/components/home/MobileStickyCTA'
 import CartDrawer from '@/components/home/CartDrawer'
 import { useCart } from '@/contexts/CartContext'
 
@@ -42,7 +41,6 @@ export default function HomePage() {
       <TrustSection />
       <SellSection />
       <Footer />
-      <MobileStickyCTA cartCount={cartCount} />
       <WhatsAppButton />
       <CartDrawer open={isCartOpen} onClose={closeCart} />
     </div>

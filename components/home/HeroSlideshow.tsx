@@ -11,6 +11,7 @@ const heroSlides = [
     cta: 'Live Gold Price',
     ctaHref: '#live-price',
     image: '/hero/baner 1 tora.jpg',
+    mobileClass: 'object-[70%]',
   },
   {
     title: 'Reliable Bullion Dealer in UAE',
@@ -18,6 +19,7 @@ const heroSlides = [
     cta: 'Explore Bullion',
     ctaHref: '#shop',
     image: '/hero/baner 2 tora.jpg',
+    mobileClass: 'object-center',
   },
   {
     title: 'Uncompromised Standards for Gold and Silver Bars',
@@ -25,6 +27,7 @@ const heroSlides = [
     cta: 'Buy Gold Bars',
     ctaHref: '#shop',
     image: '/hero/banner 3 tora.jpg',
+    mobileClass: 'object-[70%]',
   },
 ]
 
@@ -38,24 +41,24 @@ export default function HeroSlideshow() {
 
   return (
     <section className="relative bg-[#F7F5F2] overflow-hidden">
-      <div className="relative h-[500px] md:h-[650px]">
+      <div className="relative h-[480px] sm:h-[520px] md:h-[650px]">
         {heroSlides.map((slide, i) => (
           <div
             key={i}
             className={`absolute inset-0 transition-opacity duration-1000 ${i === currentSlide ? 'opacity-100' : 'opacity-0'}`}
           >
-            <Image src={slide.image} alt={slide.title} fill className="object-cover" priority={i === 0} />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
+            <Image src={slide.image} alt={slide.title} fill sizes="100vw" className={`object-cover md:object-center ${slide.mobileClass}`} priority={i === 0} />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
             <div className="absolute inset-0 flex items-center">
               <div className="max-w-[1400px] mx-auto px-4 md:px-6 w-full">
-                <p className="text-[#C9982A] text-sm font-semibold mb-2">Tora Bullion</p>
-                <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4 max-w-xl">
+                <p className="text-[#C9982A] text-xs sm:text-sm font-semibold mb-2">Tora Bullion</p>
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-tight mb-3 md:mb-4 max-w-xs sm:max-w-sm md:max-w-xl">
                   {slide.title}
                 </h1>
-                <p className="text-white/80 text-lg mb-6">{slide.subtitle}</p>
+                <p className="text-white/80 text-sm sm:text-base md:text-lg mb-4 md:mb-6 max-w-xs sm:max-w-sm md:max-w-lg">{slide.subtitle}</p>
                 <a
                   href={slide.ctaHref}
-                  className="inline-flex items-center gap-2 bg-[#C9982A] hover:bg-[#B8871A] text-white px-6 py-3 rounded-md text-sm font-bold"
+                  className="inline-flex items-center gap-2 bg-[#C9982A] hover:bg-[#B8871A] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-md text-xs sm:text-sm font-bold"
                 >
                   {slide.cta}
                   <ChevronRight className="w-4 h-4" />

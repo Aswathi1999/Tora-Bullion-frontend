@@ -416,7 +416,7 @@ export default function Navbar({ cartCount, onCartClick }: { cartCount: number; 
         <div className="flex items-center justify-between h-20">
 
           <Link href="/" className="flex-shrink-0">
-            <Image src={LOGO_URL} alt="Tora Bullion" width={380} height={152} className="h-28 w-auto" priority />
+            <Image src={LOGO_URL} alt="Tora Bullion" width={380} height={152} className="h-28 sm:h-32 md:h-28 w-auto" priority />
           </Link>
 
           {/* Desktop nav */}

@@ -64,7 +64,7 @@ export default function GoldBullionSection() {
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#C9982A]/25 to-transparent" />
 
       <div className="relative mx-auto max-w-[1400px] px-4 md:px-6">
-        <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
+        <div className="grid items-center gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-24">
 
           {/* ══ TEXT ══════════════════════════════════════════════ */}
           <motion.div
@@ -167,7 +167,7 @@ export default function GoldBullionSection() {
           </motion.div>
 
           {/* ══ IMAGES ════════════════════════════════════════════ */}
-          <div ref={imgRef} className="relative h-[520px] select-none md:h-[620px]">
+          <div ref={imgRef} className="relative h-[300px] select-none sm:h-[400px] md:h-[520px] lg:h-[620px]">
 
             {/* Ambient glow */}
             <motion.div
@@ -239,7 +239,7 @@ export default function GoldBullionSection() {
               initial={{ opacity: 0, scale: 0.75 }}
               animate={imgInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, ease, delay: 0.55 }}
-              className="absolute left-[50%] top-[43%] -translate-x-1/2 -translate-y-1/2"
+              className="absolute left-[50%] top-[43%] -translate-x-1/2 -translate-y-1/2 hidden sm:block"
             >
               <motion.div
                 animate={{ y: [0, -7, 0] }}
@@ -256,7 +256,7 @@ export default function GoldBullionSection() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={imgInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.55, ease, delay: 0.7 }}
-              className="absolute right-0 top-[49%]"
+              className="absolute right-0 top-[49%] hidden sm:block"
             >
               <motion.div
                 animate={{ y: [0, -5, 0] }}
